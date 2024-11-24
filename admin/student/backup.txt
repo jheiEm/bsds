@@ -1,0 +1,88 @@
+<div class="container-fluid">
+    <form action="" id="patient-form">
+        <input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="firstname" class="control-label">First Name</label>
+                <input type="text" name="firstname" id="firstname" class="form-control form-control-border" placeholder="First Name" value ="<?php echo isset($firstname) ? $firstname : '' ?>" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="middlename" class="control-label">Middle Name <em>(optional)</em></label>
+                <input type="text" name="middlename" id="middlename" class="form-control form-control-border" placeholder="Middle Name (optional)" value ="<?php echo isset($middlename) ? $middlename : '' ?>">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastname" class="control-label">Last Name</label>
+                <input type="text" name="lastname" id="lastname" class="form-control form-control-border" placeholder="Last Name" value ="<?php echo isset($lastname) ? $lastname : '' ?>" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="suffix" class="control-label">Suffix <em>(If Any)</em></label>
+                <input type="text" name="suffix" id="suffix" class="form-control form-control-border" placeholder="Sr/Jr" value ="<?php echo isset($middlename) ? $middlename : '' ?>">
+            </div>
+	     <div class="form-group col-md-6">
+                <label for="suffix" class="control-label">Philhealth No.(if any) </em></label>
+                <input type="text" name="suffix" id="suffix" class="form-control form-control-border" placeholder="" value ="<?php echo isset($middlename) ? $middlename : '' ?>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="gender" class="control-label">Gender</label>
+                <select name="gender" id="gender" class="form-control form-control-border" reqiured>
+                    <option <?= isset($gender) && $gender == 'Male' ? 'selected' : '' ?>>Male</option>
+                    <option <?= isset($gender) && $gender == 'Female' ? 'selected' : '' ?>>Female</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="dob" class="control-label">Date of Birth</label>
+                <input type="date" name="dob" id="dob" class="form-control form-control-border" placeholder="Contact #" value ="<?php echo isset($dob) ? date("Y-m-d",strtotime($dob)) : '' ?>" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="age" class="control-label">Age</label>
+                <input type="number" name="email" id="Age" class="form-control form-control-border" placeholder="Age" value ="" max="100" >
+            </div>
+            <div class="form-group col-md-6">
+                <label for="contact" class="control-label">Contact #</label>
+                <input type="text" name="contact" id="contact" class="form-control form-control-border" placeholder="Contact #" value ="<?php echo isset($contact) ? $contact : '' ?>" required>
+            </div>
+        </div>
+	 <div class="row">
+            <div class="form-group col-md-12">
+                <label for="address" class="control-label">Address</label>
+                <textarea rows="3" name="address" id="address" class="form-control form-control-sm rounded-0" placeholder="Block 6, Lot 23, Here Subd., There City, 2306" required><?php echo isset($address) ? $address : '' ?></textarea>
+            </div>
+        </div>
+	   <div class="row">
+            <div class="form-group col-md-6">
+                <label for="age" class="control-label">Blood Pressure</label>
+                <input type="text" name="bloodpressure" id="bloodpressure" class="form-control form-control-border" placeholder="Blood Pressure" value =""  >
+            </div>
+            <div class="form-group col-md-6">
+                <label for="contact" class="control-label">Temperature</label>
+                <input type="text" name="temperature" id="temperature" class="form-control form-control-border" placeholder="Temperature &deg;C" value ="<?php echo isset($contact) ? $contact : '' ?>" required>
+            </div>
+		 <div class="form-group col-md-6">
+                <label for="contact" class="control-label">Respiration Rate</label>
+                <input type="text" name="respirationrate" id="respiration" class="form-control form-control-border" placeholder="Respiration Rate" value ="<?php echo isset($contact) ? $contact : '' ?>" required>
+            </div>
+ 		<div class="form-group col-md-6">
+                <label for="contact" class="control-label">Pulse Rate</label>
+                <input type="text" name="pulserate" id="pulserate" class="form-control form-control-border" placeholder="Pulse Rate" value ="<?php echo isset($contact) ? $contact : '' ?>" required>
+            </div>
+        </div>
+	  <div class="form-group col-md-6">
+                <label for="disease" class="control-label">Disease</label>
+                <select name="gender" id="gender" class="form-control form-control-border" reqiured>
+                    <option <?= isset($gender) && $gender == 'Fever' ? 'selected' : '' ?>>Fever</option>
+                    <option <?= isset($gender) && $gender == 'Cough' ? 'selected' : '' ?>>Cough</option>
+		    <option <?= isset($gender) && $gender == 'Pneumonia' ? 'selected' : '' ?>>Pneumonia</option>
+   			 <option <?= isset($gender) && $gender == 'Rashes' ? 'selected' : '' ?>>Rashes</option>
+                </select>
+            </div>
+	<div class="form-group col-md-12">
+                <label for="address" class="control-label">Complaints</label>
+                <textarea rows="3" name="address" id="address" class="form-control form-control-sm rounded-0" ></textarea>
+            </div>
+       
+    </form>
+</div>
